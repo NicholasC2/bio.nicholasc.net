@@ -55,8 +55,8 @@ body {
 }
 
 .socials a > img {
-	width: clamp(0.4rem, 5vw, 3rem);
-	height: clamp(0.4rem, 5vw, 3rem);
+	width: clamp(1.7rem, 5vw, 3rem);
+	height: clamp(1.7rem, 5vw, 3rem);
 	cursor: pointer;
 }
 
