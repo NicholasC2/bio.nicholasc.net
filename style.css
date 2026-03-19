@@ -1,0 +1,49 @@
+body {
+	font-size: clamp(1px, 2vw, 20px);
+	
+	background: radial-gradient(#001000, black);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	min-height: 100vh;
+	margin: 0;
+}
+
+.container {
+	color: lime;
+	font-family: 'Courier New', Courier, monospace;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	overflow-wrap: anywhere;
+}
+
+.socials {
+	margin: 1vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.socials a > img {
+	width: clamp(1px, 5vw, 50px);
+	height: clamp(1px, 5vw, 50px);
+	cursor: pointer;
+}
+
+.socials a {
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 5px;
+}
