@@ -55,11 +55,9 @@ body {
 }
 
 .socials a > img {
-	width: clamp(0.1rem, 5vw, 3rem);
-	height: clamp(0.1rem, 5vw, 3rem);
+	width: clamp(0.4rem, 5vw, 3rem);
+	height: clamp(0.4rem, 5vw, 3rem);
 	cursor: pointer;
-
-	filter: drop-shadow(#FFFFFFA0 0px 0px 5px) blur(0.7px);
 }
 
 .socials a {
