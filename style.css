@@ -25,10 +25,16 @@ body {
 	transform: translate(-50%, -50%);
 
 	overflow-wrap: anywhere;
+
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
 }
 
 .socials {
-	margin: 1vw;
+	margin: 4vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -46,4 +52,19 @@ body {
 	cursor: pointer;
 	text-decoration: none;
 	margin: 5px;
+}
+
+.container .logo {
+	opacity: 75%;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		transform: translate(-50%, -50%) scale(0.9);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
 }
