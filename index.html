@@ -56,10 +56,11 @@
             canvas.width = canvas.clientWidth;
             canvas.height = canvas.clientHeight;
 
+            const unicode = "VhL87jvdU4lXMJQkyiYHzGNgr2ZDqFBcTItxn5SWw13ERfps0auCem9OAob6PK".split("")
             const charPageWidth = 100;
             let charWidth = canvas.width / charPageWidth;
             const charHeight = 20;
-            const tailLength = 5;
+            const tailLength = 3;
 
             class Char {
                 x = 0;
@@ -92,12 +93,12 @@
                     char.y++;
 
                     context.fillStyle = "#00FF0050";
-                    context.fillText("A", char.x * charWidth, char.y * charHeight);
+                    context.fillText(unicode[(char.y + char.x * 56) % unicode.length], char.x * charWidth, char.y * charHeight);
 
                     for(let i = 1; i <= tailLength; i++) {
                         const alpha = 0.5 - (i / tailLength) * 0.4;
                         context.fillStyle = `rgba(0,255,0,${alpha})`;
-                        context.fillText("A", char.x * charWidth, (char.y - i) * charHeight);
+                        context.fillText(unicode[((char.y - i + char.x * 56) % unicode.length + unicode.length) % unicode.length], char.x * charWidth, (char.y - i) * charHeight);
                     }
 
                     if((char.y - tailLength) * charHeight > canvas.height) {
