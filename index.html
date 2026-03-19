@@ -39,5 +39,15 @@
                 </a>
             </div>
         </div>
+        <script>
+            window.addEventListener('load', () => {
+                function keepTop(times = 10) {
+                    if (times <= 0) return;
+                    window.scrollTo(0, 0);
+                    requestAnimationFrame(() => keepTop(times - 1));
+                }
+                keepTop();
+            });
+        </script>
     </body>
 </html>

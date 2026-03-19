@@ -6,9 +6,14 @@ body {
 		radial-gradient(circle at 100% 20%, #000022, transparent 60%),
 		radial-gradient(circle at 20% 0%, #002200, transparent 60%),
 		black;
-	
-	min-height: 100vh;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+	height: auto;
+
 	margin: 0;
+
+	position: relative;
 }
 
 body::after {
@@ -25,16 +30,15 @@ body::after {
 }
 
 .container {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	padding-top: 200px;
+    margin: 0 auto;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	overflow-wrap: anywhere;
+	align-items: center;
 	
 	opacity: 100%;
 	animation-name: fadeInOpacity;
@@ -80,15 +84,20 @@ body::after {
 	opacity: 75%;
 }
 
+.container img {
+	width: fit-content;
+	height: auto;
+}
+
 @keyframes fadeInOpacity {
 	0% {
-		transform: translate(-50%, -50%) scale(0.9);
+		transform: scale(0.9);
 		opacity: 0%;
 		filter: drop-shadow(0 0 0 lime) blur(5px);
 		text-shadow: 0 0 0 lime;
 	}
 	100% {
-		transform: translate(-50%, -50%) scale(1);
+		transform: scale(1);
 		opacity: 100%;
 		filter: drop-shadow(0 0 20px lime) blur(0.4px);
 		text-shadow: 0 0 20px lime;
