@@ -1,5 +1,5 @@
 body {
-	font-size: clamp(1px, 2vw, 20px);
+	font-size: 1.7vw;
 
 	background-color: black;
 	
@@ -26,7 +26,6 @@ body::after {
 	top: 50%;
 	transform: translate(-50%, -50%);
 
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
