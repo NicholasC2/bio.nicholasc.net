@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        <canvas class="matrix"></canvas>
         <div class="container">
             <pre class="logo">
  ███▄    █  ██▓ ▄████▄   ██░ ██  ▒█████   ██▓    ▄▄▄        ██████  ▄████▄  
@@ -48,6 +49,62 @@
                 }
                 keepTop();
             });
+
+            const canvas = document.querySelector("canvas");
+            const context = canvas.getContext('2d');
+
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+
+            const charPageWidth = 100;
+            let charWidth = canvas.width / charPageWidth;
+            const charHeight = 20;
+            const tailLength = 5;
+
+            class Char {
+                x = 0;
+                y = 0;
+
+                constructor(x = 0, y = 0) {
+                    this.x = x;
+                    this.y = y;
+                }
+            }
+
+            let chars = [];
+
+            while(chars.length < 100) {
+                chars.push(new Char(Math.floor(Math.random() * charPageWidth), Math.floor(Math.random() * (canvas.height / charHeight))));
+            }
+
+            setInterval(() => {
+                canvas.width = canvas.clientWidth;
+                canvas.height = canvas.clientHeight;
+
+                charWidth = canvas.width / charPageWidth;
+
+                context.fillStyle = "#000000";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                context.font = `${charHeight}px monospace`;
+
+                for(const char of chars) {
+                    char.y++;
+
+                    context.fillStyle = "#00FF0050";
+                    context.fillText("A", char.x * charWidth, char.y * charHeight);
+
+                    for(let i = 1; i <= tailLength; i++) {
+                        const alpha = 0.5 - (i / tailLength) * 0.4;
+                        context.fillStyle = `rgba(0,255,0,${alpha})`;
+                        context.fillText("A", char.x * charWidth, (char.y - i) * charHeight);
+                    }
+
+                    if((char.y - tailLength) * charHeight > canvas.height) {
+                        char.y = 0;
+                    }
+                }
+            }, 100);
         </script>
     </body>
 </html>
