@@ -26,11 +26,13 @@ body {
 
 	overflow-wrap: anywhere;
 
-	opacity: 1;
+	opacity: 100%;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-duration: 1s;
+
+	filter: drop-shadow(1px 1px 20px lime) blur(0.4px);
 }
 
 .socials {
@@ -52,6 +54,12 @@ body {
 	cursor: pointer;
 	text-decoration: none;
 	margin: 5px;
+
+	transition: opacity 0.2s ease-out;
+}
+
+.socials a:hover {
+	opacity: 50%;
 }
 
 .container .logo {
@@ -61,10 +69,12 @@ body {
 @keyframes fadeInOpacity {
 	0% {
 		transform: translate(-50%, -50%) scale(0.9);
-		opacity: 0;
+		opacity: 0%;
+		filter: drop-shadow(0px 0px 0px lime) blur(5px);
 	}
 	100% {
 		transform: translate(-50%, -50%) scale(1);
-		opacity: 1;
+		opacity: 100%;
+		filter: drop-shadow(1px 1px 20px lime) blur(0.4px);
 	}
 }
