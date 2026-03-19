@@ -1,7 +1,11 @@
 body {
-	font-size: 1.7vw;
-
-	background-color: black;
+	font-size: clamp(0.1rem, 1.7vw, 1rem);
+	
+	background:
+		radial-gradient(circle at 20% 100%, #220000, transparent 60%),
+		radial-gradient(circle at 100% 20%, #000022, transparent 60%),
+		radial-gradient(circle at 20% 0%, #002200, transparent 60%),
+		black;
 	
 	min-height: 100vh;
 	margin: 0;
@@ -46,7 +50,7 @@ body::after {
 }
 
 .socials {
-	margin: 4vw;
+	margin: 50px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -54,8 +58,8 @@ body::after {
 }
 
 .socials a > img {
-	width: 5vw;
-	height: 5vw;
+	width: clamp(0.1rem, 5vw, 3rem);
+	height: clamp(0.1rem, 5vw, 3rem);
 	cursor: pointer;
 }
 
@@ -63,7 +67,7 @@ body::after {
 	display: block;
 	cursor: pointer;
 	text-decoration: none;
-	margin: 5px;
+	margin: clamp(0.1rem, 1vw, 1rem);
 
 	transition: opacity 0.2s ease-out;
 }
