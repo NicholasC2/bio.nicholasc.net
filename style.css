@@ -2,9 +2,9 @@ body {
 	font-size: clamp(1rem, 1.7vw, 1rem);
 	
 	background:
-		radial-gradient(circle at 20% 100%, #660000, transparent 60%),
-		radial-gradient(circle at 100% 20%, #000066, transparent 60%),
-		radial-gradient(circle at 20% 0%, #006600, transparent 60%),
+		radial-gradient(circle at 20% 100%, #440000, transparent 60%),
+		radial-gradient(circle at 100% 20%, #000044, transparent 60%),
+		radial-gradient(circle at 20% 0%, #004400, transparent 60%),
 		black;
 
     min-height: 100vh;
@@ -24,7 +24,7 @@ body {
 	opacity: 0.5;
 }
 
-.container {
+.container:not(.logo) {
 	padding-top: 200px;
     margin: 0 auto;
 
