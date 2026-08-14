@@ -24,7 +24,6 @@ class Character {
     constructor(x) {
         this.x = x;
         this.y = Math.random() * -50;
-        this.length = Math.floor(Math.random() * 20) + 5;
     }
 
     update() {
