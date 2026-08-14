@@ -1,36 +1,21 @@
-body {
-	font-size: clamp(1rem, 1.7vw, 1rem);
-	
+html {
+	min-height: 100vh;
+
 	background:
 		radial-gradient(circle at 20% 100%, #440000, transparent 60%),
 		radial-gradient(circle at 100% 20%, #000044, transparent 60%),
 		radial-gradient(circle at 20% 0%, #004400, transparent 60%),
 		black;
 
-    min-height: 100vh;
-
-	margin: 0;
+	font-family: 'Courier New', Courier, monospace;
 }
 
-.matrix {
-	position: absolute;
-
-	top: 0;
-	left: 0;
-
-	width: 100%;
-	height: 100vh;
-
-	opacity: 0.5;
-}
-
-.container:not(.logo) {
-	padding-top: 100px;
-    margin: 0 auto;
+body {
+	min-width: 100vw;
+	margin: 100px 0;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	text-align: center;
 	overflow-wrap: anywhere;
 	align-items: center;
@@ -40,47 +25,40 @@ body {
     animation: siteFadeIn 1s ease-out forwards;
 
 	color: lime;
-	font-family: 'Courier New', Courier, monospace;
 
 	filter: drop-shadow(0 0 20px lime) blur(0.4px);
 	text-shadow: 0 0 20px lime;
 }
 
+.logo {
+	white-space: pre;
+	font-size: calc(100vw/48);
+}
+
 .socials {
-	margin: 50px;
+	margin: 10px;
 	display: flex;
+	gap: clamp(0.1rem, 1vw, 3rem);
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.socials a > img {
+.socials > * {
+	display: block;
 	width: clamp(1.7rem, 5vw, 3rem);
 	height: clamp(1.7rem, 5vw, 3rem);
 	cursor: pointer;
-}
 
-.socials a {
-	display: block;
-	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: contain;
+
 	text-decoration: none;
-	margin: clamp(0.1rem, 1vw, 1rem);
-
 	transition: opacity 0.2s ease-out;
 }
 
-.socials a:hover {
+.socials > *:hover {
 	opacity: 50%;
-}
-
-.container .logo {
-	font-size: clamp(0.1rem, 1.7vw, 1rem);
-	opacity: 75%;
-}
-
-.container img {
-	width: fit-content;
-	height: auto;
 }
 
 @keyframes siteFadeIn {
