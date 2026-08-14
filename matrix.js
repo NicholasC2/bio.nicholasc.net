@@ -69,8 +69,10 @@ function loop() {
         char.update();
         char.draw();
     }
-
-    setTimeout(loop, 160);
 }
 
-loop();
+for(let i = 0; i < 30; i++) {
+    loop();
+}
+
+setInterval(loop, 160);
