@@ -38,7 +38,7 @@ body {
 }
 
 .logo {
-	width: min(800px, 100vw);
+	width: min(800px, 80vw);
 	filter: drop-shadow(0 0 10px lime);
 }
 
