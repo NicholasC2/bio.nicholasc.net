@@ -28,7 +28,7 @@ class Character {
     update() {
         this.y += 1;
 
-        if(this.y > canvas.height / fontSize) {
+        if(this.y > canvas.height / fontSize || Math.random() > 0.98) {
             this.y = 0;
         }
     }
