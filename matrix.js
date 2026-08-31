@@ -1,16 +1,15 @@
 const canvas = document.getElementById("matrix");
 const context = canvas.getContext("2d");
 
+canvas.width = canvas.clientWidth / 2
+canvas.height = canvas.clientHeight / 2
+
 const fontSize = 16;
 
 const ascii = `
-abcdefghijklmnopqrstuvwxyz
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-0123456789
 !@#$%^&*()_+-=[]{}|;:',.<>/?\\
 ~\`"€
 §±×÷
-░▒▓█▀▄▌▐
 ■□▪▫●○◆◇
 ▲△▼▽◀▶◁▷
 ←→↑↓↔↕↖↗↘↙
