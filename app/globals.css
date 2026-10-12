@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-  line-height: 1rem;
+  line-height: clamp(1px, 1vw, 10px);
   font-size: clamp(1px, 1vw, 10px);
 }
 
