@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background: black;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+
+  margin: 0;
+  text-align: center;
+}
+
+.logo {
+  line-height: 1em;
+  font-size: clamp(1px, 1vw, 10px);
+}
+
+.socials {
+  display: inline-flex;
+}
+
+.socials a {
+  width: clamp(1px, 10vw, 30px);
+  height: clamp(1px, 10vw, 30px);
+
+  color: white;
+  transition: opacity 250ms;
+  filter: drop-shadow(0 0 clamp(0.1px, 1vw, 2px) lime);
+}
+
+.socials a:hover {
+  opacity: 50%;
+}
+
+.matrix-canvas {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+
+  z-index: -999;
+
+  box-sizing: border-box;
+
+  opacity: 50%;
+}
+
+.bio {
+  margin: auto;
+}
