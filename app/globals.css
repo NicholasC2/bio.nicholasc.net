@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
 
   background: black;
   color: lime;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Roboto Mono", monospace;
 
   margin: 0;
   text-align: center;
