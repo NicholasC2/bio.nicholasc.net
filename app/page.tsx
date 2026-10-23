@@ -98,7 +98,7 @@ export default function Home() {
 	return (
 		<>
 			<div className="bio">
-				<Image src={Logo} alt="" />
+				<Image className="logo" src={Logo} alt="" />
 
 				<div className="socials">
 					<SocialLink icon={FaGithub} href="https://github.com/NicholasC2" name="github" />
