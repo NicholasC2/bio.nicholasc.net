@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { FaDiscord, FaGithub, FaInstagram, FaSpotify, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaInstagram, FaSpotify, FaYoutube, FaSoundcloud } from "react-icons/fa";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -117,19 +117,22 @@ export default function Home() {
           </pre>
           <div className="socials">
               <a href="https://github.com/NicholasC2" target="_blank">
-                <FaGithub size={"100%"} />
+                <FaGithub size={"100%"} /> github
               </a>
               <a href="https://instagram.com/nicholasc.died" target="_blank">
-                <FaInstagram size={"100%"} />
+                <FaInstagram size={"100%"} /> instagram
               </a>
               <a href="https://discordapp.com/users/nick.c_" target="_blank">
-                <FaDiscord size={"100%"} />
+                <FaDiscord size={"100%"} /> discord
               </a>
               <a href="https://youtube.com/@nicholasc404" target="_blank">
-                <FaYoutube size={"100%"} />
+                <FaYoutube size={"100%"} /> youtube
               </a>
               <a href="https://open.spotify.com/user/31myoemelk2vzmcth5qvg64hpslq" target="_blank">
-                <FaSpotify size={"100%"} />
+                <FaSpotify size={"100%"} /> spotify
+              </a>
+              <a href="https://soundcloud.com/deziner_cutzz" target="_blank">
+                <FaSoundcloud size={"100%"} /> soundcloud
               </a>
           </div>
       </div>
