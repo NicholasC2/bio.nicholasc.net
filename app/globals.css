@@ -12,6 +12,10 @@ body {
   text-align: center;
 }
 
+.logo {
+  width: 100%;
+}
+
 .socials {
   margin-top: 50px;
 
