@@ -21,6 +21,7 @@ body {
 
 .socials {
   display: inline-flex;
+  flex-direction: column;
 }
 
 .socials a {
